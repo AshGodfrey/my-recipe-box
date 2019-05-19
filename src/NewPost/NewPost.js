@@ -3,14 +3,14 @@ import { Route } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import './NewPost.css';
-import { Button } from 'react-native-elements';
+
 
 class NewPost extends React.Component{ 
 	render(){
 		return(
-			<div class="body">
+			<div>
 				<Navbar />
-				<main> 
+				<main class="body"> 
 					<header>
 					<h1>New Recipe</h1>
 					</header>
@@ -56,7 +56,7 @@ class NewPost extends React.Component{
 			            	</label>
 
 			            	<div class="button">
-			            	 	<Button>Save and Post</Button>
+			            	 	<button class="new-button">Save and Post</button>
 			            	</div>
 			            </div>
 					</form>

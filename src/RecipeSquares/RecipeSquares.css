@@ -1,0 +1,52 @@
+.grid {
+  display: flex;                     
+  flex-wrap: wrap;                     /* enable flex items to wrap */
+  justify-content: space-between;
+ 
+}
+.cell {
+  width: 32%;
+  padding-bottom: 32%; /* Same as width, sets height (this is how the item is "made up in this wireframe") */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  position: relative;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.cell-info {
+    display: none;
+}
+
+.cell:hover .cell-info,
+.cell:focus .cell-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cell li {
+    list-style: none;
+    color: white;
+}
+
+/*media queries*/
+@media only screen and (min-width: 450px) {
+  .profile-img {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #test {
+    width: 80%;
+  }
+  .grid {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}

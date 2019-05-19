@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.about-body {
   font-family: "Open Sans",
   sans-serif;
   font-size: 20px;
@@ -12,17 +12,18 @@ body {
 }
 
 
-header {
+.jumbotron {
   padding: 45px 15px;
+  
 }
 
-section {
+.about-section {
   min-height: 200px;
   padding: 30px 15px;
   background-color: #bbb;
 }
 
-section:nth-child(even) {
+.about-section:nth-child(even) {
   background-color: #ddd;
 }
 
@@ -36,7 +37,7 @@ p + p {
 }
 
 @media only screen and (min-width: 600px) {
-  body {
+  .about-body {
     max-width: 800px;
   }
 }
