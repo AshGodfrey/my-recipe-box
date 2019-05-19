@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import AboutPage from './AboutPage/AboutPage';
 import UserFeed from './UserFeed/UserFeed';
 import NewPost from './NewPost/NewPost'
+import RecipeDetails from './RecipeDetails/RecipeDetails'
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
     <Route
       exact path='/new'
       component={NewPost}
+    />
+    <Route 
+      exact path='/recipe'
+      component={RecipeDetails}
     />
     </main>
   );

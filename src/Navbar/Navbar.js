@@ -7,7 +7,10 @@ class Navbar extends React.Component{
 	render(){
 		return(
 			<nav role="navigation">
-				<div class="logo">logo</div>
+				<div class="logo">
+				<Link to={`/`}>
+					logo
+					</Link></div>
 				<div class="links">
 				<Link to={`/user`}>
 					My Feed

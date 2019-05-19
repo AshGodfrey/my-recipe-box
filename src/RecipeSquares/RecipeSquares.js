@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './RecipeSquares.css';
+
 
 class RecipeSquares extends React.Component{ 
 	render(){
@@ -8,10 +9,12 @@ class RecipeSquares extends React.Component{
 			<main>
       			<div class="container">
         			<div class="grid">
-          				<div class="cell">
+          				<div class="cell"> <Link to={`/recipe`}>
            					 <div class="cell-info">
               					<li>Name of Recipe</li>
+                       
            					 </div>
+                     </Link>
           				</div>
           				<div class="cell">
             				<div class="cell-info">
