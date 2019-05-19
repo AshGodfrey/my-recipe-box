@@ -1,0 +1,22 @@
+nav{
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo {
+	display: inline-block;
+	float: left;
+}
+
+.links{
+	display: inline-block;
+	float: right;
+}
