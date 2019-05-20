@@ -8,14 +8,17 @@ class RecipeDetails extends React.Component{
 	render(){
 		return(
 			 <main class="background-details">
-			 	
 		    	<div class="flex-container">
 		    		<div class="flex-item">
 		    			<div class="top-box outline">
-		    				<div class="top-img"><img class="profile-img" src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" />
+		    				
+		    				<div class="back-arrow">
+		    				<Link to={`/user`}>
+		    				back
+		    				</Link>
 		    				</div>
-		    				<div class="username">Username_</div>
 		    			</div>
+
 		    		</div>
 		    		<div class="recipe-details">
 		    		<div class="flex-item">
@@ -25,12 +28,20 @@ class RecipeDetails extends React.Component{
 		    		</div>
 		    		<div class="flex-item recipe-info">
 		    			<h1>Delicious Food</h1>
-		    			<div class="difficulty">
-		    				<h2>Difficulty:</h2>
+		    			<div class="time">
+		    				<h2>Time:</h2>
 		    				<p>Beginner</p>
 		    			</div>
-		    			<div class="details">
-		    				<h2>Recipe Details:</h2>
+		    			<div class="ingredients">
+		    				<h2>Recipe Ingredients:</h2>
+		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    			</div>
+		    			<div class="time">
+		    				<h2>Recipe Time:</h2>
+		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    			</div>
+		    			<div class="notes">
+		    				<h2>Recipe Notes:</h2>
 		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		    			</div>
 		    		</div>

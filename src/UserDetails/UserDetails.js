@@ -13,11 +13,9 @@ class UserDetails extends React.Component{
 	          	<section class="profile-details">
 	            	<div class="item">
 	              		<h1>_USERNAME</h1>
-	             		 <button class="edit-button">Edit</button>
+	             	
 	            	</div>
-	            	<div class="item">
-	              		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-	            	</div>
+	            	
 	          	</section>
         	</div>
    		 </header>

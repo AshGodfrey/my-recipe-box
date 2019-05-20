@@ -13,25 +13,25 @@ class AboutPage extends React.Component{
 	    		<div role="main">
 			      <header role="banner" class="jumbotron">
 			        <h1>My Recipe Box</h1>
-			        <h2>Share recipes with friends</h2>
+			        <h2>Store all your favorite recipes in one place.</h2>
 			      </header>
 			      <section class="about-section">
 			        <header>
-			            <h3>A Better Way to Food Blog</h3>
+			            <h3>A Better Way to Store Your Recipes</h3>
 			        </header>
-			        <p>Quickly upload and share your recipes with friends.</p>
+			        <p>Nothing can replace your family's classic recipe cards, but you can keep them safe by uploading them into your digital recipe box. </p>
 			      </section>
 			       <section class="about-section">
 			        <header>
 			            <h3>See Recipe Details</h3>
 			        </header>
-			        	<p>See a meal that looks good? Click on the photo for more details.</p>
+			        	<p>Take a photo of your recipes for visual cateloging and leave notes on your uploaded recipes.</p>
 			      </section>
 			      <section class="about-section">
 			        <header>
-			            <h3>Find and Save Recipes</h3>
+			            <h3>Search Your Recipes</h3>
 			        </header>
-			        	<p>Browse recipes, and curate your content.</p>
+			        	<p>Easily find your recipes by title or time to make.</p>
 			      </section>
 				</div>
 				<Footer/>

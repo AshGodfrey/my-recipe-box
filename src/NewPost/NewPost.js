@@ -25,34 +25,42 @@ class NewPost extends React.Component{
            					<input type="text" name="img-url" placeholder="http://imgur.com" required/>
            				</div>
            				<div class="form-section">
-            				<label for="recipe-summary">Recipe Summary: </label>
-            				<textarea name="recipe-summary" rows="15"   required></textarea>
+            				<label for="recipe-ingredients">Recipe Ingredients: </label>
+            				<textarea name="recipe-ingredients" rows="10"   required></textarea>
           				</div>
           				<div class="form-section">
-			            	<p>Recipe Difficulty:</p>
+            				<label for="recipe-instructions">Recipe Instructions: </label>
+            				<textarea name="recipe-instructions" rows="15"   required></textarea>
+          				</div>
+          				<div class="form-section">
+            				<label for="recipe-notes">Recipe Notes: </label>
+            				<textarea name="recipe-notes" rows="5"   required></textarea>
+          				</div>
+          				<div class="form-section">
+			            	<p>Recipe Time:</p>
 
-			            	<label for="recipe-difficulty">
-			            	<input type="radio" name="recipe-difficulty" value="1" class="recipe-difficutly-radio"/>
+			            	<label for="recipe-time">
+			            	<input type="radio" name="recipe-time" value="1" class="recipe-time-radio"/>
 			         
 
-			              	<span>Beginner</span>
-			              	<div class="difficulty">Can be made or prepared by someone with minimal cooking skills. </div>
+			              	
+			              	<div class="time">Can be made in under 45 minutes. </div>
 			            	</label>
 
-			            	<label for="recipe-difficulty">
-			            	<input type="radio" name="recipe-difficulty" value="1" class="recipe-difficutly-radio"/>
+			            	<label for="recipe-time">
+			            	<input type="radio" name="recipe-time" value="1" class="recipe-difficutly-radio"/>
 			            	
 
-			              	<span>Intermediate</span>
-			              	<div class="difficulty">Can be made by the typical hobby chef, may require several pans or specialized equipment.  </div>
+			              	
+			              	<div class="time">Can be made between 45 minutes and 1.5 hours.  </div>
 			            	</label>
 
-			            	<label for="recipe-difficulty">
-			            	<input type="radio" name="recipe-difficulty" value="1" class="recipe-difficutly-radio"/>
+			            	<label for="recipe-time">
+			            	<input type="radio" name="recipe-time" value="1" class="recipe-difficutly-radio"/>
 			            	
 
-			              	<span>Advanced</span>
-			              	<div class="difficulty">Can be made by enthusiastic and skilled home chefs. Recipes will likely require special techniques or equipment.  </div>
+			             
+			              	<div class="time">Takes over 2 hours.</div>
 			            	</label>
 
 			            	<div class="button">

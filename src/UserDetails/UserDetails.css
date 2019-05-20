@@ -12,6 +12,7 @@ header {
 #test > div {
   flex: 0 0 33%;                /* width of first flex item in main container */
   height: 120px;
+  margin: auto;
 }
 .profile-details {
   flex: 0 0 66%;                /* width of second flex item in main container */

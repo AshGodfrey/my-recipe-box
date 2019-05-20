@@ -9,11 +9,15 @@
 
 }
 
-body {
+.background-details{
   background-color: gray;
+ 
 }
+.back-arrow{
+  float: right;
+  margin-top: 30px;
 
-
+}
 
 .flex-item img{
   width: 100%;
@@ -34,7 +38,7 @@ body {
 }
 
 .username{
-  width: 66%;
+  width: 100%;
   padding-top: 25px;
 }
 .recipe-info {
