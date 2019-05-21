@@ -3,68 +3,108 @@ import { Route } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import './NewPost.css';
+import ApiContext from '../ApiContext'
+import config from '../config'
 
 
 class NewPost extends React.Component{ 
+	handleChange(event) {
+		this.setState({value:event.target.value});
+	}
+
+	static contextType = ApiContext;
+
+	handleSubmit = e => {
+		e.preventDefault()
+
+		const newRecipe = {
+			name: e.target['recipe-name'].value,
+			url: e.target['img-url'].value,
+			ingredients: e.target['recipe-ingredients'].value,
+			instructions: e.target['recipe-instructions'].value,
+			notes: e.target['recipe-notes'].value,
+			cooking_speed: e.target['recipe-time'].value,
+		}
+
+      fetch(`${config.API_ENDPOINT}/recipes`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newRecipe),
+      })
+        .then(res => {
+          if (!res.ok)
+           return res.json().then(e => Promise.reject(e))
+        	return res.json()
+        })
+        .then(newRecipe => {
+          this.context.addRecipe(newRecipe)
+          this.props.history.push(`/user`)
+        })
+        .catch(error => {
+          console.error({ error })
+        })
+	}
 	render(){
 		return(
 			<div>
 				<Navbar />
-				<main class="body"> 
+				<main className="body"> 
 					<header>
 					<h1>New Recipe</h1>
 					</header>
 
-					<form id="new-post">
-						<div class="form-section">
-            				<label for="recipe-name">Recipe Name:</label>
+					<form onSubmit={this.handleSubmit}id="new-post">
+						<div className="form-section">
+            				<label htmlFor="recipe-name">Recipe Name:</label>
            					<input type="text" name="recipe-name" placeholder="Cornish Game Hen with Tarragon" required/>
            				</div>
-           				<div class="form-section">
-            				<label for="img-url">Image URL:</label>
+           				<div className="form-section">
+            				<label htmlFor="img-url">Image URL:</label>
            					<input type="text" name="img-url" placeholder="http://imgur.com" required/>
            				</div>
-           				<div class="form-section">
-            				<label for="recipe-ingredients">Recipe Ingredients: </label>
+           				<div className="form-section">
+            				<label htmlFor="recipe-ingredients">Recipe Ingredients: </label>
             				<textarea name="recipe-ingredients" rows="10"   required></textarea>
           				</div>
-          				<div class="form-section">
-            				<label for="recipe-instructions">Recipe Instructions: </label>
+          				<div className="form-section">
+            				<label htmlFor="recipe-instructions">Recipe Instructions: </label>
             				<textarea name="recipe-instructions" rows="15"   required></textarea>
           				</div>
-          				<div class="form-section">
-            				<label for="recipe-notes">Recipe Notes: </label>
+          				<div className="form-section">
+            				<label htmlFor="recipe-notes">Recipe Notes: </label>
             				<textarea name="recipe-notes" rows="5"   required></textarea>
           				</div>
-          				<div class="form-section">
+          				<div className="form-section">
 			            	<p>Recipe Time:</p>
 
-			            	<label for="recipe-time">
-			            	<input type="radio" name="recipe-time" value="1" class="recipe-time-radio"/>
+			            	<label htmlFor="recipe-time">
+			            	<input type="radio" name="recipe-time" value="quick" className="recipe-time-radio"/>
 			         
 
 			              	
-			              	<div class="time">Can be made in under 45 minutes. </div>
+			              	<div className="time">Can be made in under 45 minutes. </div>
 			            	</label>
 
-			            	<label for="recipe-time">
-			            	<input type="radio" name="recipe-time" value="1" class="recipe-difficutly-radio"/>
+			            	<label htmlFor="recipe-time">
+			            	<input type="radio" name="recipe-time" value="medium" className="recipe-time-radio"/>
 			            	
 
 			              	
-			              	<div class="time">Can be made between 45 minutes and 1.5 hours.  </div>
+			              	<div className="time">Can be made between 45 minutes and 1.5 hours.  </div>
 			            	</label>
 
-			            	<label for="recipe-time">
-			            	<input type="radio" name="recipe-time" value="1" class="recipe-difficutly-radio"/>
+			            	<label htmlFor="recipe-time">
+			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
 			            	
 
 			             
-			              	<div class="time">Takes over 2 hours.</div>
+			              	<div className="time">Takes over 2 hours.</div>
 			            	</label>
 
-			            	<div class="button">
-			            	 	<button class="new-button">Save and Post</button>
+			            	<div className="button">
+			            	 	<button className="new-button">Save and Post</button>
 			            	</div>
 			            </div>
 					</form>

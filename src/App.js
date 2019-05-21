@@ -1,12 +1,43 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AboutPage from './AboutPage/AboutPage';
 import UserFeed from './UserFeed/UserFeed';
 import NewPost from './NewPost/NewPost'
 import RecipeDetails from './RecipeDetails/RecipeDetails'
+import ApiContext from './ApiContext';
+import config from './config';
 
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state= { recipes: []}
+  }
+
+  componentDidMount(){
+    const recipesRes = fetch(`${config.API_ENDPOINT}/recipes`, {
+        method:'GET',
+      });
+
+    Promise.all([recipesRes])
+      .then(responses => Promise.all(responses.map(res => res.json())))
+
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/recipes`),
+      ])
+    .then(([recipeRes]) => {
+      return Promise.all([
+        recipeRes.json(),
+        ])
+    })
+    .then(([recipes]) => {
+      this.setState({ recipes })
+    })
+  }
+  render() {
+    const value = {
+      recipes: this.state.recipes,
+    }
+    return (
     <main className='App'>
      <Route
       exact path='/'
@@ -26,6 +57,7 @@ function App() {
     />
     </main>
   );
+ }
 }
 
 export default App;

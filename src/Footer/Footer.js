@@ -7,7 +7,7 @@ class AboutPage extends React.Component{
 		return(
 			<footer role="content-info">
 			<p>Created by Victoria (Tori) Godfrey</p>
-			<div class="footer-links">
+			<div className="footer-links">
 				<a href="https://github.com/inertiawhoosh">Github</a>
 				<a href="https://www.linkedin.com/in/victoria-godfrey/">LinkedIn</a>
 			</div>

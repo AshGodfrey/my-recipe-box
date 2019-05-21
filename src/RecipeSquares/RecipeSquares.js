@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import { Route, Link } from 'react-router-dom';
 import './RecipeSquares.css';
+import ApiContext from '../ApiContext'
 
 
 class RecipeSquares extends React.Component{ 
+  static contextType=ApiContext;
+
 	render(){
+    var { activeRecipe } = this.props
 		return(
 			<main>
       			<div class="container">

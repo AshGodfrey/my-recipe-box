@@ -7,11 +7,11 @@ class Navbar extends React.Component{
 	render(){
 		return(
 			<nav role="navigation">
-				<div class="logo">
+				<div className="logo">
 				<Link to={`/`}>
 					logo
 					</Link></div>
-				<div class="links">
+				<div className="links">
 				<Link to={`/user`}>
 					My Feed
 				</Link>
