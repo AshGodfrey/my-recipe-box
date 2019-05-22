@@ -2,6 +2,7 @@
 	float: right;
 	margin: 4px;
 	display: block;
+  margin-bottom: 0px;
 }
 
 .popup {
@@ -14,15 +15,33 @@
   bottom: 0;
   margin: auto;
   background-color: rgba(0,0,0, 0.5);
-  overflow: scroll;
+
 }
 .popup_inner {
   position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
+  left: 5%;
+  right: 5%;
+  top: 7%;
+  bottom: 5%;
   margin: auto;
   background: white;
+}
+
+.text{
   overflow: scroll;
+  height: 95%;
+  width: 100%;
+  padding: 3%;
+  padding-top: 0px;
+ 
+
+}
+
+@media screen and (min-width: 800px) {
+  .popup_inner {
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
+  }
 }

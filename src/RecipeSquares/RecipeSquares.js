@@ -21,10 +21,10 @@ constructor() {
 
   recipeHTML(recipe){
     var recipeLink = "/recipe/" + recipe.id
-    return (<div class="cell"  onClick={this.togglePopup.bind(this)}> 
+    return (<div className="cell"  onClick={this.togglePopup.bind(this)}> 
               
                 <img className="recipe-image" src={recipe.url}/>
-                     <div class="cell-info">
+                     <div className="cell-info">
                         <li className="recipe-name">{recipe.name}</li>
                       </div>
                       {this.state.showPopup ? 
@@ -54,9 +54,10 @@ constructor() {
     var recipeArray = this.context.recipes;
     var recipes = recipeArray.map((recipe) => this.recipeHTML(recipe))
 		return(
-			<main>
-      			<div class="container">
-        			<div class="grid">
+			<main className="squares-main">
+            <h1>My Recipes</h1>
+      			<div className="container">
+        			<div className="grid">
           			{recipes}	
               </div>
       			</div>

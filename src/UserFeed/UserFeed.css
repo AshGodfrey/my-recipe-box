@@ -1,3 +1,8 @@
 .h1-my-recipes {
 	justify-content: center;
 }
+
+.user-feed {
+  position: relative;
+  min-height: 100vh;
+}

@@ -10,7 +10,10 @@
   text-align: center;
   line-height: 1.5;
   margin: auto;
+  position: relative;
+  min-height: 100vh;
 }
+
 
 
 .jumbotron {

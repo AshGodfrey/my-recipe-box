@@ -12,7 +12,7 @@ class UserFeed extends React.Component{
 		return(
 			<main>
 				<Navbar />
-				<SearchBar />
+				
 				<RecipeSquares />
 				<Footer />
 			</main>		)
