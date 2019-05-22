@@ -9,7 +9,7 @@ class Navbar extends React.Component{
 			<nav role="navigation">
 				<div className="logo">
 				<Link to={`/`}>
-					logo
+					home
 					</Link></div>
 				<div className="links">
 				<Link to={`/user`}>
