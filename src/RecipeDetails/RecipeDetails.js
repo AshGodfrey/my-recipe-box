@@ -7,9 +7,33 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import PropType from 'prop-types'
 
+class Popup extends React.Component {
+  render() {
+    return (
+      <div className='popup'>
+        <div className='popup_inner'>
+          <h1>{this.props.text}</h1>
+        <button onClick={this.props.closePopup}>close me</button>
+        </div>
+      </div>
+    );
+  }
+}
 
 class RecipeDetails extends React.Component{ 
 	static contextType = ApiContext
+
+	constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
 
 	render(){
 		var { activeRecipe } = this.props
@@ -30,7 +54,7 @@ class RecipeDetails extends React.Component{
 		    		<div class="recipe-details">
 		    		<div class="flex-item">
 		    			<div class="photo-flex">
-		    			<img class="recipe-image" src="https://www.theflavorbender.com/wp-content/uploads/2018/03/Chicken-Kottu-Roti-The-Flavor-Bender-Featured-Image-SQ-8-500x500.jpg" />
+		    			<img class="recipe-image" src="{activeRecipe.url}" />
 		    		</div>
 		    		</div>
 		    		<div class="flex-item recipe-info">

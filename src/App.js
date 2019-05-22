@@ -64,7 +64,7 @@ class App extends React.Component {
         component={NewPost}
       />
       <Route 
-        exact path='/recipe'
+        exact path='/recipe/:activeRecipeId'
         component={RecipeDetails}
       />
       </Router>
