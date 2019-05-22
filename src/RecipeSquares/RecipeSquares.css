@@ -1,16 +1,23 @@
 .grid {
   display: flex;                     
   flex-wrap: wrap;                     /* enable flex items to wrap */
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
  
 }
 .cell {
-  width: 32%;
-  padding-bottom: 32%; /* Same as width, sets height (this is how the item is "made up in this wireframe") */
-  margin-bottom: 2%; /* (100-32*3)/2 */
+  width: 28%;
   position: relative;
-  background-color: gray;
   cursor: pointer;
+  margin: 2%;
+}
+
+.recipe-image {
+  width: 100%;
+}
+
+.recipe-name {
+  width: 80%;
 }
 
 .cell-info {

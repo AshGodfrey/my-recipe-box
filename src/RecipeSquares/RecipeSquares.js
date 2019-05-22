@@ -5,62 +5,31 @@ import ApiContext from '../ApiContext'
 
 
 class RecipeSquares extends React.Component{ 
-  static contextType=ApiContext;
+  static contextType= ApiContext
+
+  recipeHTML(recipe){
+    var recipeLink = "/recipe/" + recipe.id
+    return (<div class="cell"> 
+              <Link to={recipeLink}>
+                <img className="recipe-image" src={recipe.url}/>
+                     <div class="cell-info">
+                        <li className="recipe-name">{recipe.name}</li>
+                      </div>
+              </Link>
+            </div>
+    );
+  }
+
 
 	render(){
-    var { activeRecipe } = this.props
+    var recipeArray = this.context.recipes;
+    var recipes = recipeArray.map((recipe) => this.recipeHTML(recipe))
 		return(
 			<main>
       			<div class="container">
         			<div class="grid">
-          				<div class="cell"> <Link to={`/recipe`}>
-           					 <div class="cell-info">
-              					<li>Name of Recipe</li>
-                       
-           					 </div>
-                     </Link>
-          				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-              					<li>Name of Recipe</li>
-           	 				</div>
-         				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-            		  			<li>Name of Recipe</li>
-            				</div>
-          				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-              					<li>Name of Recipe</li>
-            				</div>
-          				</div>
-          				<div class="cell">
-           					<div class="cell-info">
-              					<li>Name of Recipe</li>
-            				</div>
-         				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-              					<li>Name of Recipe</li>
-            				</div>
-          				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-             					<li>Name of Recipe</li>
-           	 				</div>
-          				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-              					<li>Name of Recipe</li>
-            				</div>
-          				</div>
-          				<div class="cell">
-            				<div class="cell-info">
-              					<li>Name of Recipe</li>
-            				</div>
-          				</div>
-      				</div>
+          			{recipes}	
+              </div>
       			</div>
 	 		</main>	
 	 )

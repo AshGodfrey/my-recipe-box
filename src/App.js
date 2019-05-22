@@ -33,29 +33,42 @@ class App extends React.Component {
       this.setState({ recipes })
     })
   }
+
+  handleAddRecipe = recipe => {
+      this.setState({
+        recipes: [
+        ...this.state.recipes,
+        recipe
+        ]
+      })
+    }
+  
   render() {
     const value = {
       recipes: this.state.recipes,
+      addRecipe: this.handleAddRecipe,
     }
     return (
-    <main className='App'>
-     <Route
-      exact path='/'
-      component={AboutPage}
-    />
-    <Route
-      exact path='/user'
-      component={UserFeed}
-    />
-    <Route
-      exact path='/new'
-      component={NewPost}
-    />
-    <Route 
-      exact path='/recipe'
-      component={RecipeDetails}
-    />
-    </main>
+    <ApiContext.Provider value={value}>
+      <Router>
+       <Route
+        exact path='/'
+        component={AboutPage}
+      />
+      <Route
+        exact path='/user'
+        component={UserFeed}
+      />
+      <Route
+        exact path='/new'
+        component={NewPost}
+      />
+      <Route 
+        exact path='/recipe'
+        component={RecipeDetails}
+      />
+      </Router>
+    </ApiContext.Provider>
   );
  }
 }

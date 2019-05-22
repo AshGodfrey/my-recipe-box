@@ -3,9 +3,16 @@ import { Route, Link } from 'react-router-dom'
 import './RecipeDetails.css'
 import UserFeed from '../UserFeed/UserFeed';
 import Navbar from '../Navbar/Navbar'
+import ApiContext from '../ApiContext';
+import config from '../config';
+import PropType from 'prop-types'
+
 
 class RecipeDetails extends React.Component{ 
+	static contextType = ApiContext
+
 	render(){
+		var { activeRecipe } = this.props
 		return(
 			 <main class="background-details">
 		    	<div class="flex-container">
