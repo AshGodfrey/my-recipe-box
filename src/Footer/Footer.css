@@ -1,6 +1,10 @@
 footer {
   padding: 1% 0;
-  background-color: #aaa;
   padding-top: 20px;
   text-align: center;
+  font-size: 12px;
+}
+
+footer p {
+	text-transform: uppercase;
 }

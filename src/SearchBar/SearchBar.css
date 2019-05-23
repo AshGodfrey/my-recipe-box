@@ -1,10 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+.nav-link li {
+  list-style:none;
+  display:inline-block;
+  font-size: 15px;
+  padding-top: 10px;
+  color: #2E51A3;
 }
 
+.community-h1 {
+  padding-bottom: 20px;
+}
 .search {
   width: 100%;
   position: relative;
@@ -40,7 +44,7 @@ body{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 40%;
   margin: auto;
   margin-bottom: 20px;
   margin-top: 80px;

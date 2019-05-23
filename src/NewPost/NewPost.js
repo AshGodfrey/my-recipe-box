@@ -104,7 +104,7 @@ class NewPost extends React.Component{
 			            	</label>
 
 			            	<div className="button">
-			            	 	<button className="new-button">Save and Post</button>
+			            	 	<button className="new-button" type="submit">Save and Post</button>
 			            	</div>
 			            </div>
 					</form>

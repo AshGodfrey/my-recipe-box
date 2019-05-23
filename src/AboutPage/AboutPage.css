@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+
+.jumbotron h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 5em;
+  font-weight: 400;
+  color: #F05D5E;
+}
+
+.jumbotron h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
 .about-body {
   font-family: "Open Sans",
   sans-serif;
@@ -28,14 +40,7 @@
   background-color: #ddd;
 }
 
-p {
-  margin: 0 auto;
-  max-width: 650px;
-}
 
-p + p {
-  margin-top: 0px;
-}
 
 @media only screen and (min-width: 600px) {
   .about-body {

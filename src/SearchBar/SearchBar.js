@@ -8,6 +8,7 @@ class SearchBar extends React.Component{
 	render(){
 		return(
 			<div class="wrap">
+			<h1 className="community-h1">Community Recipes</h1>
 			   <div class="search">
 			   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 			      <input type="text" class="searchTerm" placeholder="Search Recipes"/>

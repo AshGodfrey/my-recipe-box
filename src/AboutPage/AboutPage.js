@@ -11,10 +11,10 @@ class AboutPage extends React.Component{
 			<div class="about-body">
 				<Navbar/>
 	    		<div role="main">
-			      <header role="banner" class="jumbotron">
-			        <h1>My Recipe Box</h1>
-			        <h2>Store all your favorite recipes in one place.</h2>
+			      <header role="banner" className="jumbotron">
+			        <h1>Recipe Box</h1>
 			      </header>
+
 			      <section class="about-section">
 			        <header>
 			            <h3>A Better Way to Store Your Recipes</h3>
@@ -33,7 +33,8 @@ class AboutPage extends React.Component{
 			        </header>
 			        	<p>Easily find your recipes by title or time to make.</p>
 			      </section>
-				</div>
+			      </div>
+			
 				<Footer/>
 			</div>
 		)

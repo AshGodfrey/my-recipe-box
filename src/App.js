@@ -14,6 +14,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    document.title = 'My Recipe Box'
     const recipesRes = fetch(`${config.API_ENDPOINT}/recipes`, {
         method:'GET',
       });

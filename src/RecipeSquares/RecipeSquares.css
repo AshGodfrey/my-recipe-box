@@ -10,10 +10,20 @@
   position: relative;
   cursor: pointer;
   margin: 2%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
 }
 
 .recipe-image {
+   position: relative;
+  left: 50%;
   width: 100%;
+
+  transform: translateX(-50%);
+
+
 }
 
 .recipe-name {

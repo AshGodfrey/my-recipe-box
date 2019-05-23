@@ -20,28 +20,27 @@ constructor() {
   }
 
   recipeHTML(recipe){
-    var recipeLink = "/recipe/" + recipe.id
     return (<div class="cell"  onClick={this.togglePopup.bind(this)}> 
               
                 <img className="recipe-image" src={recipe.url}/>
                      <div class="cell-info">
-                        <li className="recipe-name">{recipe.name}</li>
+                      <li className="recipe-name">{recipe.name}</li>
                       </div>
                       {this.state.showPopup ? 
-                <Popup
-                  text={
-                    <div className="recipe-text">
-                      <h1 className="recipe-name">{recipe.name}</h1>
-                      <h2>Ingredients</h2>
-                      <p>{recipe.ingredients}</p>
-                      <h2>Instructions</h2>
-                      <p>{recipe.instructions}</p>
-                      <h2>Notes</h2>
-                      <p>{recipe.notes}</p>
-                    </div>
-                  }
-                  closePopup={this.togglePopup.bind(this)}
-                />
+                      <Popup
+                        text={
+                          <div className="recipe-text">
+                            <h1 className="recipe-name">{recipe.name}</h1>
+                            <h2>Ingredients</h2>
+                            <p><pre>{recipe.ingredients}</pre></p>
+                            <h2>Instructions</h2>
+                            <p><pre>{recipe.instructions}</pre></p>
+                            <h2>Notes</h2>
+                            <p><pre>{recipe.notes}</pre></p>
+                          </div>
+                        }
+                        closePopup={this.togglePopup.bind(this)}
+                      />
                 : null
               }
             
