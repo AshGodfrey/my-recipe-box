@@ -7,33 +7,7 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import PropType from 'prop-types'
 
-class Popup extends React.Component {
-  render() {
-    return (
-      <div className='popup'>
-        <div className='popup_inner'>
-          <h1>{this.props.text}</h1>
-        <button onClick={this.props.closePopup}>close me</button>
-        </div>
-      </div>
-    );
-  }
-}
-
-class RecipeDetails extends React.Component{ 
-	static contextType = ApiContext
-
-	constructor() {
-    super();
-    this.state = {
-      showPopup: false
-    };
-  }
-  togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
-  }
+class RecipeDetails extends React.Component {
 
 	render(){
 		var { activeRecipe } = this.props

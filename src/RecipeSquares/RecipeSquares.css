@@ -5,6 +5,24 @@
   flex-direction: row-reverse;
  
 }
+
+placeholder {
+  margin-left: 10px;
+}
+
+.community-title{
+  font-size: 3em;
+  font-weight: 600;
+  color: #F05D5E;
+  padding-top: 0;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 20px;
+}
+
+.user-feed {
+  margin-top: 100px;
+  text-align: center;
+}
 .cell {
   width: 28%;
   position: relative;

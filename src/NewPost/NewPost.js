@@ -61,7 +61,7 @@ class NewPost extends React.Component{
            					<input type="text" name="recipe-name" placeholder="Cornish Game Hen with Tarragon" required/>
            				</div>
            				<div className="form-section">
-            				<label htmlFor="img-url">Image URL:</label>
+            				<label htmlFor="img-url">500 x 500 Image URL:</label>
            					<input type="text" name="img-url" placeholder="http://imgur.com" required/>
            				</div>
            				<div className="form-section">
@@ -79,29 +79,21 @@ class NewPost extends React.Component{
           				<div className="form-section">
 			            	<p>Recipe Time:</p>
 
-			            	<label htmlFor="recipe-time">
-			            	<input type="radio" name="recipe-time" value="quick" className="recipe-time-radio"/>
-			         
 
-			              	
-			              	<div className="time">Can be made in under 45 minutes. </div>
-			            	</label>
-
-			            	<label htmlFor="recipe-time">
-			            	<input type="radio" name="recipe-time" value="medium" className="recipe-time-radio"/>
-			            	
-
-			              	
-			              	<div className="time">Can be made between 45 minutes and 1.5 hours.  </div>
-			            	</label>
-
-			            	<label htmlFor="recipe-time">
 			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
+			            	<label htmlFor="recipe-time">Takes under 45 minutes.</label><br/>
 			            	
 
-			             
-			              	<div className="time">Takes over 2 hours.</div>
-			            	</label>
+			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
+			            	<label htmlFor="recipe-time">Takes between 45 minutes and 2 hours</label><br/>
+			            	
+			            	
+			            	
+			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
+			            	<label htmlFor="recipe-time">Takes over 2 hours.</label><br/>
+			            	
+
+			         
 
 			            	<div className="button">
 			            	 	<button className="new-button" type="submit">Save and Post</button>
