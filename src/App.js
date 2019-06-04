@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AboutPage from './AboutPage/AboutPage';
 import UserFeed from './UserFeed/UserFeed';
 import NewPost from './NewPost/NewPost'
-import RecipeDetails from './RecipeDetails/RecipeDetails'
 import ApiContext from './ApiContext';
 import config from './config';
 
@@ -64,10 +63,7 @@ class App extends React.Component {
         exact path='/new'
         component={NewPost}
       />
-      <Route 
-        exact path='/recipe/:recipeId'
-        component={RecipeDetails}
-      />
+     
       </Router>
     </ApiContext.Provider>
   );

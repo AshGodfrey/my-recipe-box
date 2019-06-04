@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
-import { Route, Link } from 'react-router-dom';
+import React from 'react';
 import './RecipeSquares.css';
 import ApiContext from '../ApiContext'
-import Popup from '../Popup/Popup'
 import '../SearchBar/SearchBar.css'
 
 class RecipeSquares extends React.Component{ 
@@ -20,14 +18,12 @@ class RecipeSquares extends React.Component{
   }
 
   recipeHTML(recipe){
-    var recipeLink = "/recipe/" + recipe.id;
-    return (<div class="cell" > 
-              <Link to={recipeLink}>
-                <img className="recipe-image" src={recipe.url} />
-                     <div class="cell-info">
+    return (<div className="cell" key={recipe.id} > 
+                <img className="recipe-image" src={recipe.url} alt="this recipe" />
+                     <div className="cell-info">
                       <li className="recipe-name">{recipe.name}</li>
                       </div>
-              </Link>
+            
             </div>
     );
   }
@@ -55,8 +51,8 @@ class RecipeSquares extends React.Component{
             <i className="fa fa-search"></i>
           </button>
         </div>
-      	<div class="container">
-        	<div class="grid">
+      	<div className="container">
+        	<div className="grid">
           	{recipes}	
           </div>
       	</div>  
