@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "toris-recipe-box",
+  "name": "recipe-box",
+  "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+  ]
+}

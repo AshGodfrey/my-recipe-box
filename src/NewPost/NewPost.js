@@ -52,24 +52,25 @@ class NewPost extends React.Component{
 				<main className="body"> 
 					<header>
 					<h1>New Recipe</h1>
+					<div className="line"></div>
 					</header>
 
 					<form onSubmit={this.handleSubmit}id="new-post">
 						<div className="form-section">
             				<label htmlFor="recipe-name">Recipe Name:</label>
-           					<input type="text" name="recipe-name" placeholder="Cornish Game Hen with Tarragon" required/>
+           					<input type="text" className="textbox" name="recipe-name" placeholder="Cornish Game Hen with Tarragon" required/>
            				</div>
            				<div className="form-section">
             				<label htmlFor="img-url">500 x 500 Image URL:</label>
-           					<input type="text" name="img-url" placeholder="http://imgur.com" required/>
+           					<input type="text" className="textbox" name="img-url" placeholder="http://imgur.com" required/>
            				</div>
            				<div className="form-section">
             				<label htmlFor="recipe-ingredients">Recipe Ingredients: </label>
-            				<textarea name="recipe-ingredients" rows="10"   required></textarea>
+            				<textarea name="recipe-ingredients" className="textbox" rows="10"   required></textarea>
           				</div>
           				<div className="form-section">
             				<label htmlFor="recipe-instructions">Recipe Instructions: </label>
-            				<textarea name="recipe-instructions" rows="15"   required></textarea>
+            				<textarea name="recipe-instructions" className="textbox" rows="15"   required></textarea>
           				</div>
           				<div className="form-section">
             				<label htmlFor="recipe-notes">Recipe Notes: </label>

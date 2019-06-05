@@ -10,12 +10,15 @@
 }
 
 .body h1 {
-  font-size: 3em;
+  font-size: 50px;
   font-weight: 600;
-  color: #F05D5E;
-  padding-top: 0;
-  font-family: 'Ubuntu', sans-serif;
+  color: #2E51A3;
+  padding-top: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
+
 
 form {
   text-align: left;
@@ -25,7 +28,7 @@ form {
 }
 
 label {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Quattrocento', serif;
 
 }
 
@@ -37,6 +40,10 @@ input, textarea {
   outline: none;
 
 
+}
+
+.textbox{
+  padding: 8px;
 }
 
 .form-section{
@@ -58,9 +65,11 @@ input, textarea {
 	border: none;
   text-decoration: none;
   background-color: #F05D5E;
-  font-family: 'Ubuntu', sans-serif;
+  ffont-family: 'Quattrocento', serif;
   color: white;
+  text-transform: uppercase;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .new-button:hover {
