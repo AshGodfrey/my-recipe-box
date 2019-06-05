@@ -1,7 +1,7 @@
 import React from 'react';
 import './Jumbotron.css'
 
-class AboutPage extends React.Component{ 
+class Jumbotron extends React.Component{ 
 	render(){
 		return(
 			<header role="banner" className="jumbotron">
@@ -10,7 +10,7 @@ class AboutPage extends React.Component{
 			     </div>
 			        <div className="jumbotron-text">
 			        	<h1>Recipe Box</h1>
-			        	<h2>Find breakfast, lunch, dinner
+			        	<h2>Find your next meal
 			        	<br/>
 			        	<div className="fast">fast.</div></h2>
 			        </div>
@@ -19,5 +19,5 @@ class AboutPage extends React.Component{
 	}
 }
 
-export default AboutPage;
+export default Jumbotron;
 
