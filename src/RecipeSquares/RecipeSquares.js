@@ -45,7 +45,7 @@ class RecipeSquares extends React.Component{
             className="searchTerm"
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
-            placeholder="search for recipes"
+            placeholder="search recipes by title"
             /> 
           <button type="submit" className="searchButton">
             <i className="fa fa-search"></i>

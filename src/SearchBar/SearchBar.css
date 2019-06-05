@@ -7,32 +7,34 @@
 }
 
 .search {
-  width: 50%;
+  width: 400px;
   position: relative;
   display: flex;
   justify-content: center;
   margin: auto;
+  padding-bottom: 30px;
 }
 
 .searchTerm {
   width: 100%;
-  border: 2px solid #2E51A3;
+  border: 1px solid gray;
   border-right: none;
   padding: 5px;
   height: 36px;
   border-radius: 5px 0 0 5px;
   color: #9DBFAF;
+  padding: 8px;
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: gray;
 }
 
 .searchButton {
   width: 40px;
   height: 36px;
-  border: 1px solid #2E51A3;
-  background: #2E51A3;
+  border: 1px solid gray;
+  background: gray;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
