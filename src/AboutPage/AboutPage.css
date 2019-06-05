@@ -6,30 +6,7 @@ body {
   background-color: #F9F7F7;
 }
 
-/*Jumbotron Styling*/
-.jumbotron h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  color: #F05D5E;
-  font-size: 3em;
-  padding-top: 1 g0px;
-  margin-bottom: 0px;
-}
 
-.jumbotron h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-}
-
-.jumbotron {
-  padding: 45px 15px;
-  
-}
-
-.about-body h3 {
-  color: #2E51A3;
-  margin-bottom: 0px;
-}
 
 
 /*About Section*/
@@ -65,10 +42,6 @@ body {
 @media only screen and (min-width: 800px) {
   .about-body {
     max-width: 800px;
-  }
-
-  .jumbotron h1 {
-    font-size: 5em;
   }
 
   .some-page-wrapper{

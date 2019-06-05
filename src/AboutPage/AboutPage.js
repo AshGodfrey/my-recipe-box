@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import './AboutPage.css';
 import Footer from '../Footer/Footer';
+import Jumbotron from '../Jumbotron/Jumbotron'
 
 
 class AboutPage extends React.Component{ 
@@ -10,9 +11,8 @@ class AboutPage extends React.Component{
 			<div className="about-body">
 				<Navbar/>
 	    		<div role="main">
-			      <header role="banner" className="jumbotron">
-			        <h1>Recipe Box</h1>
-			      </header>
+	    		<Jumbotron />
+			      
 			     
 			     <div className='some-page-wrapper'>
 				  <div className='row'>
