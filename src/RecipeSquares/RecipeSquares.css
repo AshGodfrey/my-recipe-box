@@ -35,6 +35,11 @@
 
 }
 
+.link {
+  margin: 0;
+  padding: 0;
+}
+
 .cell:hover {
   border: 5px solid #F05D5E;
   box-shadow: none;

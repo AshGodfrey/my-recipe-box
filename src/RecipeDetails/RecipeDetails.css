@@ -1,99 +1,53 @@
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  position: 0;
+#recipe-details {
+  background-color: white;
   max-width: 500px;
-  background-color: white;
-
-
-}
-
-.background-details{
-  background-color: gray;
- 
-}
-.back-arrow{
-  float: right;
-  margin-top: 30px;
-
-}
-
-.flex-item img{
-  width: 100%;
-}
-
-.top-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-
-.profile-img{
-  border-radius: 50%;
-  max-width: 50px;
-  max-height: 50px;
-  margin: 5px;
-}
-
-.username{
-  width: 100%;
-  padding-top: 25px;
-}
-.recipe-info {
-  background-color: white;
-  padding-left: 10px;
-}
-
-
-
-@media screen and (min-width: 600px) and (max-width: 800px){
-  body {
-  margin: 4%;
-}
-}
-
-@media screen and (min-width: 800px) {
-
-  .flex-container {
-  width: 80%;
-  max-width: 800px;
   margin: auto;
-  background-color: white;
-  margin-top: 10%;
-  height: 425px;
-}
-.recipe-details {
-  display: flex;
-  max-height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-shadow: 3px 3px 5px rgba(64,63,76,0.4);
 }
 
-.flex-item > div {
-  flex: 1;
-}
-.recipe-image {
-   height: 100%;
-   object-fit: cover;
-   margin: 0;
-   padding: 0;
-}
-.recipe-info{
-  height: 100%;
-  overflow: auto;
-  margin-left: 10px;
+#recipe-details h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: Uppercase;
+  text-align: center;
+  color: #2E51A3;
+  margin: auto;
+  width: 80%;
 }
 
-.photo-flex {
-  height: 100%;
+#recipe-details h2 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: Uppercase;
+  color: #2E51A3;
+  margin: 0;
 }
 
-.flex-item outline {
-  display: row;
-  border-top: 1px solid gray;
+#details-img {
+  background-color: gray;
+  width: 95%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
 }
 
-.outline {
-  border-bottom: 1px solid gray;
+#back-link {
+  height: 40px;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 20px;
 }
+
+#recipe-specifics {
+  padding: 20px;
 }
+.back-arrow {
+  font-size: 20px;
+  color: gray;
+  margin-top: 8px;
+}
+
+.recipe-text {
+  white-space: pre-line;
+}
+

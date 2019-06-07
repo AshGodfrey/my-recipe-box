@@ -6,57 +6,57 @@ import Navbar from '../Navbar/Navbar'
 import ApiContext from '../ApiContext';
 import config from '../config';
 import PropType from 'prop-types'
+import Footer from '../Footer/Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 
 class RecipeDetails extends React.Component {
+	static contextType= ApiContext;
+
+	constructor(props){
+    super(props);
+    };
+
+    timeToCook({time}) {
+    	if({time} == "medium" ){
+    		return (
+    			<p>test</p>)
+    	}
+    }
 
 	render(){
-		const { recipes } = this.context
-		var { activeRecipe } = this.props;
-		return(
-			 <main class="background-details">
-		    	<div class="flex-container">
-		    		<div class="flex-item">
-		    			<div class="top-box outline">
-		    				
-		    				<div class="back-arrow">
-		    				<Link to={`/user`}>
-		    				back
-		    				</Link>
-		    				</div>
-		    			</div>
+		let currentRecipe = this.context.recipes.find(recipe => recipe.id == this.props.match.params.activeRecipeId)
 
-		    		</div>
-		    		<div class="recipe-details">
-		    		<div class="flex-item">
-		    			<div class="photo-flex">
-		    			<img class="recipe-image" src="{activeRecipe.url}" />
-		    		</div>
-		    		</div>
-		    		<div class="flex-item recipe-info">
-		    			<h1>Delicious Food</h1>
-		    			<div class="time">
-		    				<h2>Time:</h2>
-		    				<p>Beginner</p>
-		    			</div>
-		    			<div class="ingredients" style="white-space: pre-line">
-		    				<h2>Recipe Ingredients:</h2>
-		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		    			</div>
-		    			<div class="time">
-		    				<h2>Recipe Time:</h2>
-		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		    			</div>
-		    			<div class="notes">
-		    				<h2>Recipe Notes:</h2>
-		    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		    			</div>
-		    		</div>
-		    	
-			    	</div>
-		    	<div class="flex-item outline"></div>
-		    	</div>
-		    </main>	)
+		return(
+		<div id="recipe-details-container">
+			<div id="recipe-details">
+				<div id="back-link">
+					<Link to="/user">
+						<button><FontAwesomeIcon icon={ faArrowLeft} className="back-arrow"/></button>
+					</Link>
+				</div>
+				<h1>{currentRecipe.name}</h1>
+				<div className="line"></div>
+				<img src={currentRecipe.url} id="details-img" />
+				<div id="recipe-specifics">
+				<h2>Recipe Ingredients</h2>
+				<p className="recipe-text">
+					{currentRecipe.ingredients}
+				</p>
+				<h2>Recipe Instructions</h2>
+				<p className="recipe-text">
+					{currentRecipe.instructions}
+				</p>
+				<h2>Recipe Time</h2>
+				<p className="recipe-text">
+					{currentRecipe.cooking_speed}
+				</p>
+				</div>
+			</div>
+			<Footer />
+		</div>
+		)
 	}
 }
 

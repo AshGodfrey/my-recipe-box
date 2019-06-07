@@ -19,11 +19,14 @@ class RecipeSquares extends React.Component{
   }
 
   recipeHTML(recipe){
+    var RecipeLink = "/recipe/" + recipe.id
     return (<div className="cell" key={recipe.id}> 
+              <Link to = {RecipeLink} className="link">
                 <img className="recipe-image" src={recipe.url} alt="this recipe" />
                      <div className="cell-info">
                       <li className="recipe-name">{recipe.name}</li>
                       </div>       
+              </Link>
             </div>
     );
   }
