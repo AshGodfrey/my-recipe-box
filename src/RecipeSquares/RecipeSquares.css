@@ -36,7 +36,7 @@
 }
 
 .cell:hover {
-  border: 10px solid #F05D5E;
+  border: 5px solid #F05D5E;
   box-shadow: none;
 }
 
@@ -74,6 +74,7 @@
     list-style: none;
     color: white;
 }
+
 
 
 /*media queries*/

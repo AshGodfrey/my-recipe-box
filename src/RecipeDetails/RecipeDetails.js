@@ -7,10 +7,12 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import PropType from 'prop-types'
 
+
 class RecipeDetails extends React.Component {
 
 	render(){
-		var { activeRecipe } = this.props
+		const { recipes } = this.context
+		var { activeRecipe } = this.props;
 		return(
 			 <main class="background-details">
 		    	<div class="flex-container">

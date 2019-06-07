@@ -2,6 +2,7 @@ import React from 'react';
 import './RecipeSquares.css';
 import ApiContext from '../ApiContext'
 import '../SearchBar/SearchBar.css'
+import { Link } from 'react-router-dom'
 
 class RecipeSquares extends React.Component{ 
   static contextType= ApiContext
@@ -18,12 +19,11 @@ class RecipeSquares extends React.Component{
   }
 
   recipeHTML(recipe){
-    return (<div className="cell" key={recipe.id} > 
+    return (<div className="cell" key={recipe.id}> 
                 <img className="recipe-image" src={recipe.url} alt="this recipe" />
                      <div className="cell-info">
                       <li className="recipe-name">{recipe.name}</li>
-                      </div>
-            
+                      </div>       
             </div>
     );
   }

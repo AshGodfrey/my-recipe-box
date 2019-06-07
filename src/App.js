@@ -5,7 +5,7 @@ import UserFeed from './UserFeed/UserFeed';
 import NewPost from './NewPost/NewPost'
 import ApiContext from './ApiContext';
 import config from './config';
-
+import RecipeDetails from './RecipeDetails/RecipeDetails'
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -62,6 +62,10 @@ class App extends React.Component {
       <Route
         exact path='/new'
         component={NewPost}
+      />
+     <Route 
+        exact path="/recipe/:activeRecipeId"
+        component = {RecipeDetails}
       />
      
       </Router>
