@@ -47,6 +47,12 @@
   margin-top: 8px;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: white;
+}
 .recipe-text {
   white-space: pre-line;
 }
