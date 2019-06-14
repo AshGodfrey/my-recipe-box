@@ -6,7 +6,9 @@
 
 ## Summary
 
-RecipeBox allows users to submit recipe's to a shared Recipe Box.
+RecipeBox is a full-stack React application for people who want to find their next recipe fast. Users can submit a recipe, search for a recipe by title, or view current recipes. Clicking on a recipe’s picture will bring up recipe details.
+
+## Screenshots
 
 Click on "New" to be brought to the submit form for new posts. 
 ![new recipe page](./Pictures/New.png)
@@ -14,7 +16,7 @@ Click on "New" to be brought to the submit form for new posts.
 "Feed" will take you to the currently submitted recipes. 
 
 Using "search" will allow you to search recipes by title. 
-![Recipe feed page](./Pictures/Recipes.png)]
+![Recipe feed page](./Pictures/Recipes.png)
 
 Click on a recipe for additional recipe details.
 ![Recipe detail page](./Pictures/RecipeDetails.png)
