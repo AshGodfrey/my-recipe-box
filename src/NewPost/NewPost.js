@@ -26,7 +26,7 @@ class NewPost extends React.Component{
 		}
 
       fetch(`${config.API_ENDPOINT}/recipes`, {
-        method: 'POST',
+      	method: 'POST',
         headers: {
           'content-type': 'application/json'
         },
@@ -34,15 +34,15 @@ class NewPost extends React.Component{
       })
         .then(res => {
           if (!res.ok)
-           return res.json().then(e => Promise.reject(e))
+        	return res.json().then(e => Promise.reject(e))
         	return res.json()
         })
         .then(newRecipe => {
-          this.context.addRecipe(newRecipe)
-          this.props.history.push(`/user`)
+        	this.context.addRecipe(newRecipe)
+        	this.props.history.push(`/user`)
         })
         .catch(error => {
-          console.error({ error })
+        	console.error({ error })
         })
 	}
 	render(){
@@ -51,8 +51,8 @@ class NewPost extends React.Component{
 				<Navbar />
 				<main className="body"> 
 					<header>
-					<h1>New Recipe</h1>
-					<div className="line"></div>
+						<h1>New Recipe</h1>
+						<div className="line"></div>
 					</header>
 
 					<form onSubmit={this.handleSubmit}id="new-post">
@@ -79,28 +79,20 @@ class NewPost extends React.Component{
           				<div className="form-section">
 			            	<p>Recipe Time:</p>
 
-
 			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
 			            	<label htmlFor="recipe-time">Takes under 45 minutes.</label><br/>
-			            	
 
 			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
 			            	<label htmlFor="recipe-time">Takes between 45 minutes and 2 hours</label><br/>
 			            	
-			            	
-			            	
 			            	<input type="radio" name="recipe-time" value="slow" className="recipe-time-radio"/>
 			            	<label htmlFor="recipe-time">Takes over 2 hours.</label><br/>
-			            	
-
-			         
 
 			            	<div className="button">
 			            	 	<button className="new-button" type="submit">Save and Post</button>
 			            	</div>
 			            </div>
 					</form>
-
 				</main>
 				<Footer />
 			</div>		)

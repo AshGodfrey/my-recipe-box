@@ -40,18 +40,18 @@ class RecipeDetails extends React.Component {
 				<div className="line"></div>
 				<img src={currentRecipe.url} id="details-img" />
 				<div id="recipe-specifics">
-				<h2>Recipe Ingredients</h2>
-				<p className="recipe-text">
-					{currentRecipe.ingredients}
-				</p>
-				<h2>Recipe Instructions</h2>
-				<p className="recipe-text">
-					{currentRecipe.instructions}
-				</p>
-				<h2>Recipe Time</h2>
-				<p className="recipe-text">
-					{currentRecipe.cooking_speed}
-				</p>
+					<h2>Recipe Ingredients</h2>
+					<p className="recipe-text">
+						{currentRecipe.ingredients}
+					</p>
+					<h2>Recipe Instructions</h2>
+					<p className="recipe-text">
+						{currentRecipe.instructions}
+					</p>
+					<h2>Recipe Time</h2>
+					<p className="recipe-text">
+						{currentRecipe.cooking_speed}
+					</p>
 				</div>
 			</div>
 			<Footer />

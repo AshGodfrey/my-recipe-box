@@ -8,16 +8,17 @@ class Navbar extends React.Component{
 		return(
 			<nav role="navigation">
 				<div className="logo">
-				<Link to={`/`}>
-					<img src={logo} alt="magnifying glass search icon"/>
-					</Link></div>
+					<Link to={`/`}>
+						<img src={logo} alt="magnifying glass search icon"/>
+						</Link>
+					</div>
 				<div className="links">
-				<Link to={`/user`} className="nav-link">
-					<li>Feed</li>
-				</Link>
-				<Link to={`/new`} className="nav-link">
-					<li>New</li>
-				</Link>
+					<Link to={`/user`} className="nav-link">
+						<li>Feed</li>
+					</Link>
+					<Link to={`/new`} className="nav-link">
+						<li>New</li>
+					</Link>
 				</div>
 			</nav>		)
 	}

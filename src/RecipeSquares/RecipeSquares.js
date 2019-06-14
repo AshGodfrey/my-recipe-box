@@ -23,9 +23,9 @@ class RecipeSquares extends React.Component{
     return (<div className="cell" key={recipe.id}> 
               <Link to = {RecipeLink} className="link">
                 <img className="recipe-image" src={recipe.url} alt="this recipe" />
-                     <div className="cell-info">
+                    <div className="cell-info">
                       <li className="recipe-name">{recipe.name}</li>
-                      </div>       
+                    </div>       
               </Link>
             </div>
     );
